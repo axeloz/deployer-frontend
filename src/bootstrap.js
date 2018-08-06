@@ -40,3 +40,9 @@ const token = $('meta[name="csrf-token"]').attr('content');
 $.ajaxPrefilter((options, originalOptions, jqXHR) => jqXHR.setRequestHeader('X-CSRF-Token', token));
 
 Navigation();
+
+$('.nav-tabs').children('li').on('click', function(e) {
+	var el		= $(this).children('a');
+	var hash	= $(el).attr('href');
+	window.location.hash = hash;
+});
