@@ -202,4 +202,11 @@ export default () => {
   listener.onUpdate('deployment', (data) => {
     updateDeployment(data);
   });
+
+  // Moving to the right tab when #hash is found in the URL
+  var hash = window.location.hash;
+  if (hash.length > 0) {
+    console.log('Link: '+hash+'-lnk');
+    $(hash+'-lnk').tab('show');
+  }
 };
