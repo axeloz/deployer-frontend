@@ -2,7 +2,7 @@
 const mix = require('laravel-mix');
 
 const packages = 'node_modules';
-const build = '../deployer/public';
+const build = 'build';
 
 const paths = {
   admin_lte: `${packages}/admin-lte`,
